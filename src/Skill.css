@@ -1,0 +1,125 @@
+.skill-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  padding: 2rem 1rem;
+  background: transparent;
+}
+
+.skill-title {
+  color: #61dafb;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  letter-spacing: 1px;
+}
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2.5rem 3.5rem;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(34, 34, 34, 0.85);
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(97,218,251,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 140px;
+  height: 140px;
+  min-width: 120px;
+  min-height: 120px;
+  max-width: 160px;
+  max-height: 160px;
+  box-sizing: border-box;
+}
+.skill-item:hover {
+  transform: translateY(-6px) scale(1.07);
+  box-shadow: 0 6px 24px rgba(97,218,251,0.18);
+}
+
+.skill-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.7rem;
+  color: #61dafb;
+  transition: color 0.2s;
+}
+.skill-name {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Individual icon color tweaks */
+.skill-icon.html { color: #e44d26; }
+.skill-icon.css { color: #1572b6; }
+.skill-icon.js { color: #f7df1e; }
+.skill-icon.react { color: #61dafb; }
+.skill-icon.tailwind { color: #38bdf8; }
+.skill-icon.mysql { color: #00758f; }
+
+@media (max-width: 700px) {
+  .skill-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
+    max-width: 95vw;
+  }
+  .skill-item {
+    padding: 1rem 0.7rem;
+    width: 110px;
+    height: 110px;
+    min-width: 90px;
+    min-height: 90px;
+    max-width: 120px;
+    max-height: 120px;
+  }
+  .skill-icon {
+    font-size: 2.3rem;
+  }
+  .skill-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .skill-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 1.2rem 0;
+    justify-items: center;
+  }
+  .skill-item {
+    padding: 0.7rem 0.3rem;
+    width: 90vw;
+    height: 80px;
+    min-width: 0;
+    min-height: 60px;
+    max-width: 98vw;
+    max-height: 90px;
+  }
+  .skill-icon {
+    font-size: 1.5rem;
+  }
+  .skill-name {
+    font-size: 0.85rem;
+  }
+} 
